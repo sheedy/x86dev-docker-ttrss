@@ -1,0 +1,12 @@
+web:
+  #image: clue/ttrss
+  image: x86dev/docker-ttrss
+  links:
+    - db
+  ports:
+    - 80
+  environment:
+    - VIRTUAL_HOST=rss.mixstuff.org
+
+db:
+  image: nornagon/postgres
